@@ -1,7 +1,7 @@
 import {userType} from "../types";
 
-export const fetchUserData = (id: string): Promise<userType> => {
+export const fetchUserData = (id: number): Promise<userType> => {
     return fetch(
-        `https://jsonplaceholder.typicode.com/user/${id}`
+        `https://jsonplaceholder.typicode.com/users/${id}`
     ).then((response) => response.json());
 }
